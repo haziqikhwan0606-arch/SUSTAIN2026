@@ -12,6 +12,8 @@
 
     --black: #111311;
     --orange: #F4A261;
+    --orange-soft: #F8C89D;
+    --orange-pale: #FCE9D8;
     --charcoal: #1b1d1a;
     --dark-grey: #292c28;
 
@@ -22,11 +24,14 @@
     --white: #ffffff;
 
     --forest: #29432f;
+    --forest-deep: #203629;
+    --forest-soft: #3f5945;
     --moss: #65745d;
     --acid: #b7d63d;
 
     --border-dark: rgba(255, 255, 255, 0.14);
     --border-light: rgba(17, 19, 17, 0.16);
+    --border-acid: rgba(183, 214, 61, 0.34);
 
     --font-display: "Space Grotesk", sans-serif;
     --font-body: "DM Sans", sans-serif;
@@ -59,7 +64,7 @@ html {
 
 body {
     background: var(--off-white);
-    color: var(--orange);
+    color: var(--forest);
 
     font-family: var(--font-body);
     font-size: 16px;
@@ -94,7 +99,7 @@ img {
 
 ::selection {
     background: var(--acid);
-    color: var(--orange);
+    color: var(--forest);
 
 }
 
@@ -247,7 +252,7 @@ p {
 }
 
 .button--dark {
-    ;background: var(--black)
+    background: var(--forest);
     color: var(--white);
 }
 
@@ -296,7 +301,8 @@ p {
 }
 
 .site-header.scrolled {
-    background: rgba(244, 162, 97, 0.94);
+    background: rgba(252, 233, 216, 0.96);
+    color: var(--forest);
 
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
@@ -509,9 +515,9 @@ p {
     background:
         linear-gradient(
             120deg,
-            #19231c 0%,
-            #343934 48%,
-            #151715 100%
+            var(--forest-deep) 0%,
+            var(--forest) 48%,
+            var(--moss) 100%
         );
 
     color: var(--white);
@@ -754,7 +760,7 @@ p {
 .numbers {
     padding-block: 100px;
 
-    background: var(--orange);
+    background: var(--forest);
     color: var(--white);
 }
 
@@ -812,7 +818,7 @@ p {
    ========================================================= */
 
 .journey {
-    background: var(--orange);
+    background: var(--forest);
     color: var(--white);
 
     overflow: hidden;
@@ -1138,7 +1144,7 @@ p {
    ========================================================= */
 
 .experience {
-    background: var(--orange);
+    background: var(--moss);
     color: var(--white);
 }
 
@@ -1179,7 +1185,7 @@ p {
 
     overflow: hidden;
 
-    background: var(--charcoal);
+    background: var(--forest-deep);
 
     transition:
         transform var(--transition-medium);
@@ -1215,7 +1221,7 @@ p {
 .experience-card__number {
     position: relative;
 
-    color: rgba(255,255,255,0.4);
+    color: var(--acid);
 
     font-size: 11px;
 }
@@ -1457,7 +1463,7 @@ p {
 .institute:hover {
     padding-inline: 30px;
 
-    background: var(--black);
+    background: var(--forest);
     color: var(--white);
 }
 
@@ -1503,7 +1509,7 @@ p {
 .venue {
     padding: 0;
 
-    background: var(--orange);
+    background: var(--forest);
 }
 
 .venue__visual {
@@ -1516,8 +1522,7 @@ p {
 
     overflow: hidden;
 
-    background:
-        background: var(--orange);
+    background: var(--forest);
 
     color: var(--white);
 }
@@ -1593,8 +1598,8 @@ p {
    ========================================================= */
 
 .final-cta {
-    background: var(--orange);
-    color: var(--white);
+    background: var(--orange-pale);
+    color: var(--forest);
 
     text-align: center;
 }
@@ -1606,7 +1611,7 @@ p {
 }
 
 .final-cta .section-label {
-    color: rgba(255,255,255,0.45);
+    color: var(--moss);
 }
 
 .final-cta .section-label::after {
@@ -1622,7 +1627,7 @@ p {
 }
 
 .final-cta h2 span {
-    color: var(--acid);
+    color: var(--moss);
     font-style: italic;
 }
 
@@ -1631,8 +1636,8 @@ p {
 
     margin-bottom: 60px;
 
-    border-top: 1px solid var(--border-dark);
-    border-bottom: 1px solid var(--border-dark);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
 }
 
 .final-cta__details div {
@@ -1644,7 +1649,7 @@ p {
 }
 
 .final-cta__details div:first-child {
-    border-left: 1px solid var(--border-dark);
+    border-left: 1px solid var(--border-light);
 }
 
 .final-cta__details span {
@@ -1671,7 +1676,7 @@ p {
    ========================================================= */
 
 .site-footer {
-    background: var(--orange);
+    background: var(--forest-deep);
     color: var(--white);
 
     padding-top: 100px;
@@ -2494,7 +2499,7 @@ p {
 --------------------------------------------------------- */
 
 .conference-journey {
-    background: var(--orange);
+    background: var(--forest);
     color: var(--white);
 }
 
@@ -2632,7 +2637,7 @@ p {
 --------------------------------------------------------- */
 
 .conference-components {
-    background: #dedfd9;
+    background: var(--orange-pale);
 }
 
 .components-heading {
@@ -2957,7 +2962,7 @@ p {
 /* DARK */
 
 .track-section--dark {
-    background: var(--orange);
+    background: var(--forest);
     color: var(--white);
 }
 
@@ -3075,7 +3080,7 @@ p {
 ===================================================== */
 
 .track-section--light .track-focus__item:hover {
-    background: var(--black);
+    background: var(--forest);
     color: var(--white);
 }
 
@@ -4341,7 +4346,7 @@ p {
 }
 
 .speaker-feature--dark {
-    background: var(--orange);
+    background: var(--forest);
     color: var(--white);
 }
 
@@ -4474,7 +4479,7 @@ p {
 --------------------------------------------------------- */
 
 .speaker-ecosystem {
-    background: #dedfd9;
+    background: var(--off-white);
 }
 
 .speaker-ecosystem__heading {
@@ -4579,7 +4584,7 @@ p {
 --------------------------------------------------------- */
 
 .speaker-wall {
-    background: var(--orange);
+    background: var(--forest);
     color: var(--white);
 }
 
@@ -4904,7 +4909,7 @@ p {
 --------------------------------------------------------- */
 
 .impact-journey {
-    background: var(--orange);
+    background: var(--moss);
     color: var(--white);
 }
 
@@ -5128,8 +5133,8 @@ p {
     background:
         linear-gradient(
             135deg,
-            #263b2a,
-            #68765a
+            var(--forest-deep),
+            var(--moss)
         );
 
     color: var(--white);
@@ -5357,7 +5362,7 @@ p {
 --------------------------------------------------------- */
 
 .venue-details {
-    background: #dedfd9;
+    background: var(--off-white);
 }
 
 .venue-details__heading {
@@ -5451,7 +5456,7 @@ p {
 --------------------------------------------------------- */
 
 .venue-experience {
-     background: var(--orange);
+    background: var(--forest);
     color: var(--white);
 }
 
@@ -5699,7 +5704,7 @@ p {
     display: flex;
     align-items: center;
 
-    background: #263b2a;
+    background: var(--forest-deep);
 
     color: var(--white);
 }
@@ -6265,7 +6270,7 @@ p {
 
     overflow: hidden;
 
-    background: var(--black);
+    background: var(--forest-deep);
 }
 
 .symposium-flow__image-panel img {
@@ -6301,7 +6306,7 @@ p {
 .symposium-topics {
     padding: 160px 0;
 
-    background: #eeeeea;
+    background: var(--off-white);
     color: var(--black);
 }
 
@@ -6522,7 +6527,7 @@ p {
 .symposium-audience {
     padding: 160px 0;
 
-    background: var(--orange);
+    background: var(--moss);
     color: var(--white);
 }
 
@@ -6995,7 +7000,7 @@ p {
 
 .awards-philosophy {
     padding: 120px 0;
-    background: var(--orange);
+    background: var(--forest);
     color: var(--white);
 }
 
@@ -7793,7 +7798,7 @@ p {
     border: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: 0;
 
-    background-color: #111813;
+    background-color: var(--forest-deep);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -8002,7 +8007,7 @@ p {
 
     padding: 48px;
 
-    background: #171a17;
+    background: var(--forest-deep);
 
     border: 1px solid
         rgba(157, 177, 151, 0.32);
@@ -8480,7 +8485,7 @@ p {
 
     overflow: hidden;
 
-    background: #111311 !important;
+    background: var(--forest-deep) !important;
 }
 
 
@@ -8800,7 +8805,7 @@ p {
     content: "";
     position: absolute;
     inset: 0;
-    background: #111;
+    background: var(--forest);
     transform: translateX(-101%);
     transition: transform 0.45s ease;
     z-index: 0;
@@ -8897,7 +8902,7 @@ p {
     content: "";
     position: absolute;
     inset: 0;
-    background: #111;
+    background: var(--forest);
     transform: translateY(101%);
     transition: transform 0.45s ease;
     z-index: 0;
@@ -9002,7 +9007,7 @@ p {
     position: relative;
     min-height: 90vh;
     overflow: hidden;
-    background: #111;
+    background: var(--forest-deep);
 }
 
 .symposium-hero__video {
@@ -10076,7 +10081,7 @@ p {
 
 .exhibition-flow {
     padding: 140px 0;
-    background: var(--orange);
+    background: var(--forest);
     color: var(--white);
     position: relative;
 }
@@ -10172,8 +10177,8 @@ p {
 }
 
 .exhibition-flow__step--accent:hover {
-    background: #c3e244;
-    border-color: #c3e244;
+    background: var(--acid);
+    border-color: var(--acid);
 }
 
 .exhibition-flow__step--accent > span {
@@ -10490,9 +10495,9 @@ p {
 }
 
 .networking-tags span:hover {
-    background: var(--black);
+    background: var(--forest);
     color: var(--acid);
-    border-color: var(--black);
+    border-color: var(--forest);
     transform: translateY(-2px);
 }
 
@@ -10503,7 +10508,7 @@ p {
 
 .exhibition-scale {
     padding: 140px 0;
-    background: var(--black);
+    background: var(--forest-deep);
     color: var(--white);
     position: relative;
     overflow: hidden;
@@ -10804,7 +10809,7 @@ p {
 .speaker-card {
     position: relative;
 
-    background: var(--black);
+    background: var(--forest-deep);
 
     overflow: hidden;
 }
@@ -11423,7 +11428,7 @@ p {
 
     padding: 8rem 0;
 
-    background: var(--orange);
+    background: var(--forest);
 
     color: var(--white);
 
@@ -11682,7 +11687,7 @@ p {
 
     padding: 20px;
 
-    background: #111;
+    background: var(--forest-deep);
     color: white;
 
     display: block;
@@ -11879,7 +11884,7 @@ p {
 
     min-height: 90vh;
 
-    background: #111 !important;
+    background: var(--forest-deep) !important;
 }
 
 
@@ -11974,7 +11979,7 @@ p {
 
     min-height: 90vh;
 
-    background: #111 !important;
+    background: var(--forest-deep) !important;
 }
 
 
@@ -12088,9 +12093,9 @@ p {
 }
 
 .logout-btn:hover {
-    background: #c8ff00;
-    border-color: #c8ff00;
-    color: #111;
+    background: var(--acid);
+    border-color: var(--acid);
+    color: var(--black);
 }
 
 .venue-photo {
