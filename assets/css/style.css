@@ -33,7 +33,7 @@
     --border-light: rgba(17, 19, 17, 0.16);
     --border-acid: rgba(183, 214, 61, 0.34);
 
-    --font-display: "Space Grotesk", sans-serif;
+    --font-display: "Instrument Sans", "DM Sans", sans-serif;
     --font-body: "DM Sans", sans-serif;
 
     --container: 1440px;
@@ -43,6 +43,28 @@
     --transition-fast: 0.25s ease;
     --transition-medium: 0.5s cubic-bezier(0.22, 1, 0.36, 1);
     --transition-slow: 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =========================================================
+   DECORATIVE ARROWS
+   =========================================================
+   Directional marks should only appear on interactive links.
+   Content cards and process steps use layout and typography
+   to communicate hierarchy instead.
+   ========================================================= */
+
+.journey-stage__arrow,
+.keynote-item__arrow,
+.impact-stage__arrow,
+.venue-experience-item__arrow,
+.award-item__arrow,
+.gsed-card-arrow,
+.register-option__arrow,
+.exhibition-flow__arrow,
+.impact-final__arrow,
+.impact-objective__arrow {
+    display: none;
 }
 
 
@@ -158,6 +180,7 @@ h4 {
     font-family: var(--font-display);
     font-weight: 600;
     letter-spacing: -0.045em;
+    font-optical-sizing: auto;
 }
 
 p {
@@ -2818,6 +2841,7 @@ p {
         flex-direction: column;
         gap: 8px;
     }
+
 
     .inner-hero__content h1 {
         font-size: 18vw;
@@ -7846,7 +7870,7 @@ p {
 
     color: #ffffff;
 
-    font-family: "Space Grotesk", sans-serif;
+    font-family: var(--font-display);
     font-size: clamp(42px, 4vw, 68px);
     font-weight: 500;
     line-height: 0.9;
@@ -8099,7 +8123,7 @@ p {
 
     margin-bottom: 32px;
 
-    font-family: "Space Grotesk", sans-serif;
+    font-family: var(--font-display);
 
     font-size:
         clamp(72px, 9vw, 120px);
@@ -8148,7 +8172,7 @@ p {
 
     margin: 0 0 18px;
 
-    font-family: "Space Grotesk", sans-serif;
+    font-family: var(--font-display);
 
     font-size:
         clamp(30px, 4vw, 48px);
@@ -12149,4 +12173,22 @@ p {
     height: 520px;
     object-fit: cover;
     display: block;
+}
+
+/* =========================================================
+   MOBILE — REMOVE DECORATIVE ARROW MARKS
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .site-header a > span:last-child,
+    .site-main a > span:last-child,
+    .site-main button > span:last-child,
+    .site-main .text-link > span:last-child,
+    .site-main [class*="__arrow"],
+    .site-main [class$="-arrow"],
+    .site-main .track-section__header h2 span {
+        display: none;
+    }
+
 }

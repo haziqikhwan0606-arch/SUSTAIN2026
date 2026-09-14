@@ -67,7 +67,7 @@ $logoFile  = $logoFile ?? 'logo/logo.png';
     >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap"
         rel="stylesheet"
     >
 
