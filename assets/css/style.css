@@ -12147,6 +12147,7 @@ p {
     .site-main .text-link > span:last-child,
     .site-main [class*="__arrow"],
     .site-main [class$="-arrow"],
+    .site-main .audience-item::after,
     .site-main .track-section__header h2 span {
         display: none;
     }
