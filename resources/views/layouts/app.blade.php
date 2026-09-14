@@ -42,11 +42,29 @@
             <a href="{{ route('venue') }}" class="{{ request()->routeIs('venue') ? 'active' : '' }}">Venue</a>
         </nav>
 
-        <!-- REGISTER CTA -->
-        <a href="{{ route('register') }}" class="header-register">
-            <span>Register</span>
-            <span aria-hidden="true">↗</span>
-        </a>
+        <!-- HEADER ACTIONS -->
+        <div class="header-actions">
+            @if(session('admin_logged_in'))
+                <a href="{{ route('admin.registrations') }}" class="header-login header-login--active">
+                    <span>Admin</span>
+                </a>
+                <a href="{{ route('admin.logout') }}" class="header-login" onclick="event.preventDefault(); document.getElementById('header-logout-form').submit();">
+                    <span>Logout</span>
+                </a>
+                <form id="header-logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            @else
+                <a href="{{ route('admin.login') }}" class="header-login">
+                    <span>Login</span>
+                </a>
+            @endif
+
+            <a href="{{ route('register') }}" class="header-register">
+                <span>Register</span>
+                <span aria-hidden="true">↗</span>
+            </a>
+        </div>
 
         <!-- MOBILE MENU BUTTON -->
         <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-navigation">
@@ -68,6 +86,16 @@
             <a href="{{ route('impact') }}">Impact</a>
             <a href="{{ route('gsed') }}">GSED</a>
             <a href="{{ route('venue') }}">Venue</a>
+
+            @if(session('admin_logged_in'))
+                <a href="{{ route('admin.registrations') }}">Admin Panel</a>
+                <a href="{{ route('admin.logout') }}" onclick="event.preventDefault(); document.getElementById('mobile-logout-form').submit();">Logout</a>
+                <form id="mobile-logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            @else
+                <a href="{{ route('admin.login') }}">Login</a>
+            @endif
 
             <a href="{{ route('register') }}" class="mobile-nav__register">
                 <span>Register for SUSTAIN 2026</span>

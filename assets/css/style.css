@@ -417,7 +417,47 @@ p {
 }
 
 
-/* HEADER REGISTER */
+/* HEADER ACTIONS & REGISTER */
+
+.header-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-login {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    background: transparent;
+    color: var(--white);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    transition:
+        border-color var(--transition-fast),
+        color var(--transition-fast),
+        background var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.header-login:hover {
+    border-color: var(--acid);
+    color: var(--acid);
+    transform: translateY(-2px);
+}
+
+.header-login--active {
+    border-color: var(--acid);
+    color: var(--acid);
+}
 
 .header-register {
     display: inline-flex;
@@ -1906,6 +1946,7 @@ p {
     }
 
     .main-nav,
+    .header-actions,
     .header-register {
         display: none;
     }
