@@ -4,6 +4,8 @@
     $pageTitle = 'Exhibition & Networking — SUSTAIN 2026';
 @endphp
 
+@section('logoFile', 'logo/logo.academy.png')
+
 @section('content')
 <main class="inner-page exhibition-page">
 

@@ -4,6 +4,8 @@
     $pageTitle = 'Impact Awards — SUSTAIN 2026';
 @endphp
 
+@section('logoFile', 'logo/logo.awards.png')
+
 @section('content')
 <main class="inner-page awards-page">
 

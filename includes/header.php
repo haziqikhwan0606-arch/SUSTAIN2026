@@ -10,6 +10,12 @@
  *
  * Inner pages:
  * $basePath = '../';
+ *
+ * Optional page-specific logo:
+ * $logoFile = 'logo/logo.conference.png';
+ *
+ * Default:
+ * $logoFile = 'logo/logo.png';
  */
 
 if (session_status() === PHP_SESSION_NONE) {
@@ -18,6 +24,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
 $pageTitle = $pageTitle ?? 'SUSTAIN 2026 — Malaysia Sustainability & ESG Conference';
 $basePath  = $basePath ?? '';
+$logoFile  = $logoFile ?? 'logo/logo.png';
 ?>
 
 <!DOCTYPE html>
@@ -100,7 +107,7 @@ $basePath  = $basePath ?? '';
         >
 
             <img
-                src="<?= $basePath; ?>assets/images/logo.png"
+                src="<?= $basePath; ?>assets/images/<?= htmlspecialchars($logoFile); ?>"
                 alt="SUSTAIN 2026"
             >
 
@@ -126,12 +133,6 @@ $basePath  = $basePath ?? '';
                 href="<?= $basePath; ?>pages/conference.php"
             >
                 Conference
-            </a>
-
-            <a
-                href="<?= $basePath; ?>pages/tracks.php"
-            >
-                Tracks
             </a>
 
             <a
@@ -216,13 +217,6 @@ $basePath  = $basePath ?? '';
                 href="<?= $basePath; ?>pages/conference.php"
             >
                 Conference
-            </a>
-
-
-            <a
-                href="<?= $basePath; ?>pages/tracks.php"
-            >
-                Tracks
             </a>
 
 

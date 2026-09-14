@@ -30,14 +30,13 @@
 
         <!-- LOGO -->
         <a href="{{ route('home') }}" class="site-logo" aria-label="SUSTAIN 2026 Home">
-            <img src="{{ asset('assets/images/logo.png') }}" alt="SUSTAIN 2026">
+            <img src="{{ asset('assets/images/' . (trim($__env->yieldContent('logoFile')) ?: ($logoFile ?? 'logo/logo.png'))) }}" alt="SUSTAIN 2026">
         </a>
 
         <!-- DESKTOP NAVIGATION -->
         <nav class="main-nav" aria-label="Main navigation">
             <a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">Home</a>
             <a href="{{ route('conference') }}" class="{{ request()->routeIs('conference') ? 'active' : '' }}">Conference</a>
-            <a href="{{ route('tracks') }}" class="{{ request()->routeIs('tracks') ? 'active' : '' }}">Tracks</a>
             <a href="{{ route('speakers') }}" class="{{ request()->routeIs('speakers') ? 'active' : '' }}">Speakers</a>
             <a href="{{ route('impact') }}" class="{{ request()->routeIs('impact') ? 'active' : '' }}">Impact</a>
             <a href="{{ route('venue') }}" class="{{ request()->routeIs('venue') ? 'active' : '' }}">Venue</a>
@@ -62,7 +61,6 @@
         <div class="mobile-nav__inner">
             <a href="{{ route('home') }}">Home</a>
             <a href="{{ route('conference') }}">Conference</a>
-            <a href="{{ route('tracks') }}">Tracks</a>
             <a href="{{ route('speakers') }}">Speakers</a>
             <a href="{{ route('symposium') }}">Symposium</a>
             <a href="{{ route('awards') }}">Impact Awards</a>

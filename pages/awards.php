@@ -2,7 +2,7 @@
 
 $pageTitle = 'Impact Awards — SUSTAIN 2026';
 $basePath  = '../';
-
+$logoFile = 'logo/logo.awards.png';
 require_once '../includes/header.php';
 
 ?>

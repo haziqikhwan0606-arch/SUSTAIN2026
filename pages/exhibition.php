@@ -3,7 +3,7 @@
 
 $pageTitle = 'Exhibition & Networking — SUSTAIN 2026';
 $basePath  = '../';
-
+$logoFile = 'logo/logo.academy.png';
 require_once '../includes/header.php';
 
 ?>

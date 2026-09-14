@@ -2,7 +2,7 @@
 
 $pageTitle = 'Academic Symposium — SUSTAIN 2026';
 $basePath  = '../';
-
+$logoFile = 'logo/logo.symposium.png';
 require_once '../includes/header.php';
 
 ?>

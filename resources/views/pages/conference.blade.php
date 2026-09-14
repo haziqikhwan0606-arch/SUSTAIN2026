@@ -4,6 +4,8 @@
     $pageTitle = 'The Conference — SUSTAIN 2026';
 @endphp
 
+@section('logoFile', 'logo/logo.conference.png')
+
 @section('content')
 <main class="inner-page conference-page">
 
