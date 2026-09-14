@@ -2,7 +2,7 @@
 
 $pageTitle = 'The Conference — SUSTAIN 2026';
 $basePath  = '../';
-
+$logoFile = 'logo/logo.conference.png';
 require_once '../includes/header.php';
 
 ?>
