@@ -946,6 +946,197 @@ p {
         grid-template-columns: 1fr;
     }
 
+
+    /* =====================================================
+       SPEAKERS — CARD GRID
+    ===================================================== */
+
+    .speaker-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        margin-top: 60px;
+    }
+
+    .speaker-card {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        min-height: 230px;
+        overflow: hidden;
+        background: var(--white);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 18px;
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .speaker-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.1);
+    }
+
+    .speaker-card__image {
+        position: relative;
+        min-height: 230px;
+        overflow: hidden;
+        background: #e9efec;
+    }
+
+    .speaker-card__image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .speaker-card:hover .speaker-card__image img {
+        transform: scale(1.04);
+    }
+
+    .speaker-card__placeholder {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        color: #7a8580;
+    }
+
+    .speaker-card__placeholder span {
+        font-size: 42px;
+        font-weight: 300;
+    }
+
+    .speaker-card__content {
+        display: flex;
+        flex-direction: column;
+        padding: 28px 30px;
+    }
+
+    .speaker-card__meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .speaker-card__number {
+        color: #8b9892;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+    }
+
+    .speaker-card__category {
+        display: inline-flex;
+        padding: 7px 11px;
+        border-radius: 100px;
+        background: #eaf4e7;
+        color: #6f9d3d;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+    }
+
+    .speaker-card h3 {
+        margin: 0 0 10px;
+        color: #173f4e;
+        font-size: 22px;
+        line-height: 1.15;
+    }
+
+    .speaker-card__position {
+        margin: 0;
+        color: #5f6d68;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .speaker-card__position span {
+        color: #173f4e;
+        font-weight: 600;
+    }
+
+    .speaker-card__topic {
+        margin-top: auto;
+        padding-top: 18px;
+    }
+
+    .speaker-card__topic-label {
+        display: block;
+        margin-bottom: 6px;
+        color: #7ca94b;
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+    }
+
+    .speaker-card__topic p {
+        margin: 0;
+        color: #687771;
+        font-size: 12px;
+        font-style: italic;
+        line-height: 1.5;
+    }
+
+    .speaker-card__country {
+        margin-top: 16px;
+        color: #87938e;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+        .speaker-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .speaker-grid {
+            gap: 18px;
+            margin-top: 40px;
+        }
+
+        .speaker-card {
+            grid-template-columns: 110px 1fr;
+            min-height: 180px;
+            border-radius: 14px;
+        }
+
+        .speaker-card__image {
+            min-height: 180px;
+        }
+
+        .speaker-card__content {
+            padding: 20px;
+        }
+
+        .speaker-card__meta {
+            margin-bottom: 12px;
+        }
+
+        .speaker-card h3 {
+            font-size: 17px;
+        }
+
+        .speaker-card__position {
+            font-size: 11px;
+        }
+
+        .speaker-card__topic {
+            padding-top: 12px;
+        }
+
+        .speaker-card__topic p {
+            font-size: 10px;
+        }
+    }
+
     .journey-stage {
         min-height: 280px;
 
@@ -10806,8 +10997,25 @@ p {
     .networking-tags span {
         padding: 10px 18px;
         font-size: 10px;
-    }
+        }
+}
 
+
+/* =====================================================
+   TRACKS — HERO CONTENT ABOVE VIDEO OVERLAY
+===================================================== */
+
+.tracks-page .inner-hero__meta,
+.tracks-page .inner-hero__content,
+.tracks-page .inner-hero__footer {
+        position: relative !important;
+        z-index: 2 !important;
+        opacity: 1 !important;
+}
+
+.tracks-page .inner-hero__content h1,
+.tracks-page .inner-hero__description {
+        opacity: 1 !important;
 }
 /* =====================================================
    SPEAKER GRID
