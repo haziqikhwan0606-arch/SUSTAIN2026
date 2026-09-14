@@ -12183,17 +12183,17 @@ p {
 @media (max-width: 700px) {
 
     .site-header a > span:last-child,
-    .site-main a > span:last-child,
-    .site-main button > span:last-child,
-    .site-main .text-link > span:last-child,
-    .site-main [class*="__arrow"],
-    .site-main [class$="-arrow"],
-    .site-main .audience-item::after,
-    .site-main .track-section__header h2 span {
+    a > span:last-child,
+    button > span:last-child,
+    .text-link > span:last-child,
+    [class*="__arrow"],
+    [class$="-arrow"],
+    .audience-item::after,
+    .track-section__header h2 span {
         display: none;
     }
 
-    .site-main .audience-item::after {
+    .audience-item::after {
         content: none !important;
     }
 
