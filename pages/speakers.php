@@ -1,10 +1,71 @@
-
 <?php
 
 $pageTitle = 'Speakers — SUSTAIN 2026';
 $basePath  = '../';
 
 require_once '../includes/header.php';
+
+
+/* =====================================================
+   SPEAKER DATA
+   =====================================================
+
+   Bila speaker baru dah confirmed, kau cuma tambah
+   satu block dalam array ni.
+
+   IMAGE:
+   ../assets/images/speakers/speaker-01.jpg
+
+   LOGO:
+   ../assets/images/brands/company-logo.png
+   (optional)
+
+===================================================== */
+
+$speakers = [
+
+    [
+        'name' => 'Speaker Name',
+        'title' => 'YBhg. Prof. / Dr. / Mr. / Ms.',
+        'position' => 'Position / Role',
+        'organisation' => 'Organisation Name',
+        'country' => 'Malaysia',
+        'category' => 'KEYNOTE SPEAKER',
+        'topic' => 'Session or Topic Title',
+        'image' => '../assets/images/speakers/speaker-01.jpg',
+        'logo' => ''
+    ],
+
+    [
+        'name' => 'Speaker Name',
+        'title' => 'Dr.',
+        'position' => 'Position / Role',
+        'organisation' => 'Organisation Name',
+        'country' => 'Malaysia',
+        'category' => 'PANELIST',
+        'topic' => 'Session or Topic Title',
+        'image' => '../assets/images/speakers/speaker-02.jpg',
+        'logo' => ''
+    ],
+
+    // =================================================
+    // COPY THIS BLOCK FOR MORE SPEAKERS
+    // =================================================
+    /*
+    [
+        'name' => 'Speaker Name',
+        'title' => 'Dr.',
+        'position' => 'Position / Role',
+        'organisation' => 'Organisation Name',
+        'country' => 'Malaysia',
+        'category' => 'PANELIST',
+        'topic' => 'Session or Topic Title',
+        'image' => '../assets/images/speakers/speaker-03.jpg',
+        'logo' => ''
+    ],
+    */
+
+];
 
 ?>
 
@@ -14,85 +75,85 @@ require_once '../includes/header.php';
     <!-- =====================================================
          PAGE HERO
     ====================================================== -->
-<section class="speakers-hero">
 
-    <!-- BACKGROUND VIDEO -->
+    <section class="speakers-hero">
 
-    <video
-        class="speakers-hero__video"
-        autoplay
-        muted
-        loop
-        playsinline
-    >
-        <source
-            src="../assets/videos/speakers.mp4"
-            type="video/mp4"
+        <!-- BACKGROUND VIDEO -->
+
+        <video
+            class="speakers-hero__video"
+            autoplay
+            muted
+            loop
+            playsinline
         >
-    </video>
+            <source
+                src="../assets/videos/speakers.mp4"
+                type="video/mp4"
+            >
+        </video>
 
 
-    <!-- VIDEO OVERLAY -->
+        <!-- VIDEO OVERLAY -->
 
-    <div class="speakers-hero__overlay"></div>
-
-
-    <!-- HERO TOP -->
-
-    <div class="speakers-hero__top">
-
-        <span>
-            03 / SPEAKERS
-        </span>
-
-        <span>
-            20+ VOICES · 5 COUNTRIES
-        </span>
-
-    </div>
+        <div class="speakers-hero__overlay"></div>
 
 
-    <!-- HERO CONTENT -->
+        <!-- HERO TOP -->
 
-    <div class="speakers-hero__content">
+        <div class="speakers-hero__top">
 
-        <p class="eyebrow">
-            THE PEOPLE BEHIND THE CONVERSATION
-        </p>
+            <span>
+                SPEAKERS
+            </span>
 
-        <h1>
-            PEOPLE
-            <span>WHO</span>
-            <br>
-            MOVE
-            <span>IDEAS.</span>
-        </h1>
+            <span>
+                20+ VOICES · 5 COUNTRIES
+            </span>
 
-        <p>
-            Leaders, practitioners, policymakers, researchers
-            and sustainability voices shaping the conversation
-            around Malaysia's transition.
-        </p>
-
-    </div>
+        </div>
 
 
-    <!-- HERO BOTTOM -->
+        <!-- HERO CONTENT -->
 
-    <div class="speakers-hero__bottom">
+        <div class="speakers-hero__content">
 
-        <span>
-            LOCAL + INTERNATIONAL
-        </span>
+            <p class="eyebrow">
+                THE PEOPLE BEHIND THE CONVERSATION
+            </p>
 
-        <span>
-            SUSTAIN 2026
-        </span>
+            <h1>
+                PEOPLE
+                <span>WHO</span>
+                <br>
+                MOVE
+                <span>IDEAS.</span>
+            </h1>
 
-    </div>
+            <p>
+                Leaders, practitioners, policymakers, researchers
+                and sustainability voices shaping the conversation
+                around Malaysia's transition.
+            </p>
 
-</section>
-```
+        </div>
+
+
+        <!-- HERO BOTTOM -->
+
+        <div class="speakers-hero__bottom">
+
+            <span>
+                LOCAL + INTERNATIONAL
+            </span>
+
+            <span>
+                SUSTAIN 2026
+            </span>
+
+        </div>
+
+    </section>
 
 
 
@@ -400,243 +461,244 @@ require_once '../includes/header.php';
 
 
     <!-- =====================================================
-     SPEAKER ECOSYSTEM
-====================================================== -->
+         SPEAKER ECOSYSTEM
+    ====================================================== -->
 
-<section class="speaker-ecosystem section section--grey">
+    <section class="speaker-ecosystem section section--grey">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="speaker-ecosystem__heading">
+            <div class="speaker-ecosystem__heading">
 
-            <div class="section-index">
-                03
-            </div>
-
-            <div>
-
-                <p class="eyebrow eyebrow--dark">
-                    SPEAKER ECOSYSTEM
-                </p>
-
-                <h2>
-                    MANY
-                    <span>SECTORS.</span>
-                    <br>
-                    ONE ROOM.
-                </h2>
-
-            </div>
-
-        </div>
-
-
-        <div class="speaker-roles">
-
-
-            <!-- ROLE 01 -->
-
-            <article
-                class="speaker-role"
-                style="background-image: url('../assets/images/speakers/1.jpg');"
-            >
-
-                <span>
-                    01
-                </span>
-
-                <div>
-
-                    <small>
-                        POLICY
-                    </small>
-
-                    <h3>
-                        Government
-                    </h3>
-
-                    <p>
-                        National policy, sustainability
-                        direction and industry transition.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- ROLE 02 -->
-
-            <article
-                class="speaker-role"
-                style="background-image: url('../assets/images/speakers/2.jpg');"
-            >
-
-                <span>
-                    02
-                </span>
-
-                <div>
-
-                    <small>
-                        BUSINESS
-                    </small>
-
-                    <h3>
-                        Corporate & SME
-                    </h3>
-
-                    <p>
-                        Practical ESG implementation,
-                        readiness and business transformation.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- ROLE 03 -->
-
-            <article
-                class="speaker-role"
-                style="background-image: url('../assets/images/speakers/3.jpg');"
-            >
-
-                <span>
+                <div class="section-index">
                     03
-                </span>
+                </div>
 
                 <div>
 
-                    <small>
-                        DISCLOSURE
-                    </small>
-
-                    <h3>
-                        ESG Reporting
-                    </h3>
-
-                    <p>
-                        Reporting standards, data,
-                        technology and credibility.
+                    <p class="eyebrow eyebrow--dark">
+                        SPEAKER ECOSYSTEM
                     </p>
+
+                    <h2>
+                        MANY
+                        <span>SECTORS.</span>
+                        <br>
+                        ONE ROOM.
+                    </h2>
 
                 </div>
 
-            </article>
+            </div>
+
+
+            <div class="speaker-roles">
+
+
+                <!-- ROLE 01 -->
+
+                <article
+                    class="speaker-role"
+                    style="background-image: url('../assets/images/speakers/1.jpg');"
+                >
+
+                    <span>
+                        01
+                    </span>
+
+                    <div>
+
+                        <small>
+                            POLICY
+                        </small>
+
+                        <h3>
+                            Government
+                        </h3>
+
+                        <p>
+                            National policy, sustainability
+                            direction and industry transition.
+                        </p>
+
+                    </div>
+
+                </article>
 
 
 
-            <!-- ROLE 04 -->
+                <!-- ROLE 02 -->
 
-            <article
-                class="speaker-role"
-                style="background-image: url('../assets/images/speakers/4.jpg');"
-            >
+                <article
+                    class="speaker-role"
+                    style="background-image: url('../assets/images/speakers/2.jpg');"
+                >
 
-                <span>
-                    04
-                </span>
+                    <span>
+                        02
+                    </span>
 
-                <div>
+                    <div>
 
-                    <small>
-                        FINANCE
-                    </small>
+                        <small>
+                            BUSINESS
+                        </small>
 
-                    <h3>
-                        Financial Institutions
-                    </h3>
+                        <h3>
+                            Corporate & SME
+                        </h3>
 
-                    <p>
-                        Sustainable finance, investment,
-                        grants and financing pathways.
-                    </p>
+                        <p>
+                            Practical ESG implementation,
+                            readiness and business transformation.
+                        </p>
 
-                </div>
+                    </div>
 
-            </article>
-
-
-
-            <!-- ROLE 05 -->
-
-            <article
-                class="speaker-role"
-                style="background-image: url('../assets/images/speakers/5.jpg');"
-            >
-
-                <span>
-                    05
-                </span>
-
-                <div>
-
-                    <small>
-                        KNOWLEDGE
-                    </small>
-
-                    <h3>
-                        Academia & Researchers
-                    </h3>
-
-                    <p>
-                        Research, innovation and new
-                        sustainability knowledge.
-                    </p>
-
-                </div>
-
-            </article>
+                </article>
 
 
 
-            <!-- ROLE 06 -->
+                <!-- ROLE 03 -->
 
-            <article
-                class="speaker-role"
-                style="background-image: url('../assets/images/speakers/6.jpg');"
-            >
+                <article
+                    class="speaker-role"
+                    style="background-image: url('../assets/images/speakers/3.jpg');"
+                >
 
-                <span>
-                    06
-                </span>
+                    <span>
+                        03
+                    </span>
 
-                <div>
+                    <div>
 
-                    <small>
-                        INTERNATIONAL
-                    </small>
+                        <small>
+                            DISCLOSURE
+                        </small>
 
-                    <h3>
-                        Global Voices
-                    </h3>
+                        <h3>
+                            ESG Reporting
+                        </h3>
 
-                    <p>
-                        Cross-border perspectives and
-                        international collaboration.
-                    </p>
+                        <p>
+                            Reporting standards, data,
+                            technology and credibility.
+                        </p>
 
-                </div>
+                    </div>
 
-            </article>
+                </article>
 
+
+
+                <!-- ROLE 04 -->
+
+                <article
+                    class="speaker-role"
+                    style="background-image: url('../assets/images/speakers/4.jpg');"
+                >
+
+                    <span>
+                        04
+                    </span>
+
+                    <div>
+
+                        <small>
+                            FINANCE
+                        </small>
+
+                        <h3>
+                            Financial Institutions
+                        </h3>
+
+                        <p>
+                            Sustainable finance, investment,
+                            grants and financing pathways.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ROLE 05 -->
+
+                <article
+                    class="speaker-role"
+                    style="background-image: url('../assets/images/speakers/5.jpg');"
+                >
+
+                    <span>
+                        05
+                    </span>
+
+                    <div>
+
+                        <small>
+                            KNOWLEDGE
+                        </small>
+
+                        <h3>
+                            Academia & Researchers
+                        </h3>
+
+                        <p>
+                            Research, innovation and new
+                            sustainability knowledge.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ROLE 06 -->
+
+                <article
+                    class="speaker-role"
+                    style="background-image: url('../assets/images/speakers/6.jpg');"
+                >
+
+                    <span>
+                        06
+                    </span>
+
+                    <div>
+
+                        <small>
+                            INTERNATIONAL
+                        </small>
+
+                        <h3>
+                            Global Voices
+                        </h3>
+
+                        <p>
+                            Cross-border perspectives and
+                            international collaboration.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
 
 
     <!-- =====================================================
          SPEAKER WALL
     ====================================================== -->
 
-    <section class="speaker-wall section section--dark">
+    <section class="speaker-wall section section--light">
 
         <div class="container">
 
@@ -645,7 +707,7 @@ require_once '../includes/header.php';
 
             <div class="speaker-wall__heading">
 
-                <p class="eyebrow">
+                <p class="eyebrow eyebrow--dark">
                     SPEAKERS
                 </p>
 
@@ -664,29 +726,203 @@ require_once '../includes/header.php';
 
 
             <!-- =================================================
-                 SPEAKER EMPTY STATE
+                 SPEAKER GRID
             ================================================== -->
 
-            <div class="speaker-empty">
+            <?php if (!empty($speakers)): ?>
 
-                <span>
-                    01
-                </span>
+                <div class="speaker-grid">
 
-                <h3>
-                    SPEAKER
-                    ANNOUNCEMENTS
+                    <?php foreach ($speakers as $index => $speaker): ?>
+
+                        <article class="speaker-card">
+
+
+                            <!-- SPEAKER IMAGE -->
+
+                            <div class="speaker-card__image">
+
+                                <?php if (!empty($speaker['image'])): ?>
+
+                                    <img
+                                        src="<?= htmlspecialchars($speaker['image']) ?>"
+                                        alt="<?= htmlspecialchars($speaker['name']) ?>"
+                                        loading="lazy"
+                                    >
+
+                                <?php else: ?>
+
+                                    <div class="speaker-card__placeholder">
+                                        <span>+</span>
+                                    </div>
+
+                                <?php endif; ?>
+
+                            </div>
+
+
+
+                            <!-- SPEAKER CONTENT -->
+
+                            <div class="speaker-card__content">
+
+
+                                <!-- META -->
+
+                                <div class="speaker-card__meta">
+
+                                    <span class="speaker-card__number">
+
+                                        <?= str_pad(
+                                            $index + 1,
+                                            2,
+                                            '0',
+                                            STR_PAD_LEFT
+                                        ) ?>
+
+                                    </span>
+
+
+                                    <?php if (!empty($speaker['category'])): ?>
+
+                                        <span class="speaker-card__category">
+
+                                            <?= htmlspecialchars(
+                                                $speaker['category']
+                                            ) ?>
+
+                                        </span>
+
+                                    <?php endif; ?>
+
+                                </div>
+
+
+
+                                <!-- NAME -->
+
+                                <h3>
+
+                                    <?php if (!empty($speaker['title'])): ?>
+
+                                        <?= htmlspecialchars(
+                                            $speaker['title']
+                                        ) ?>
+
+                                    <?php endif; ?>
+
+                                    <?= htmlspecialchars(
+                                        $speaker['name']
+                                    ) ?>
+
+                                </h3>
+
+
+
+                                <!-- POSITION / ORGANISATION -->
+
+                                <p class="speaker-card__position">
+
+                                    <?php if (!empty($speaker['position'])): ?>
+
+                                        <?= htmlspecialchars(
+                                            $speaker['position']
+                                        ) ?>
+
+                                    <?php endif; ?>
+
+
+                                    <?php if (!empty($speaker['organisation'])): ?>
+
+                                        <br>
+
+                                        <span>
+
+                                            <?= htmlspecialchars(
+                                                $speaker['organisation']
+                                            ) ?>
+
+                                        </span>
+
+                                    <?php endif; ?>
+
+                                </p>
+
+
+
+                                <!-- SESSION / TOPIC -->
+
+                                <?php if (!empty($speaker['topic'])): ?>
+
+                                    <div class="speaker-card__topic">
+
+                                        <span class="speaker-card__topic-label">
+                                            SESSION
+                                        </span>
+
+                                        <p>
+                                            <?= htmlspecialchars(
+                                                $speaker['topic']
+                                            ) ?>
+                                        </p>
+
+                                    </div>
+
+                                <?php endif; ?>
+
+
+
+                                <!-- COUNTRY -->
+
+                                <?php if (!empty($speaker['country'])): ?>
+
+                                    <span class="speaker-card__country">
+
+                                        <?= htmlspecialchars(
+                                            $speaker['country']
+                                        ) ?>
+
+                                    </span>
+
+                                <?php endif; ?>
+
+
+                            </div>
+
+                        </article>
+
+                    <?php endforeach; ?>
+
+                </div>
+
+            <?php else: ?>
+
+
+                <!-- EMPTY STATE -->
+
+                <div class="speaker-empty">
+
                     <span>
-                        COMING SOON.
+                        01
                     </span>
-                </h3>
 
-                <p>
-                    Speaker details will be announced as the
-                    SUSTAIN 2026 programme is confirmed.
-                </p>
+                    <h3>
+                        SPEAKER
+                        ANNOUNCEMENTS
+                        <span>
+                            COMING SOON.
+                        </span>
+                    </h3>
 
-            </div>
+                    <p>
+                        Speaker details will be announced as the
+                        SUSTAIN 2026 programme is confirmed.
+                    </p>
+
+                </div>
+
+
+            <?php endif; ?>
 
 
         </div>
@@ -716,6 +952,7 @@ require_once '../includes/header.php';
                 href="register.php"
                 class="button button--dark"
             >
+
                 Register for SUSTAIN 2026
 
                 <span>
