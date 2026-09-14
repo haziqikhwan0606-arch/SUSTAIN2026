@@ -12152,4 +12152,8 @@ p {
         display: none;
     }
 
+    .site-main .audience-item::after {
+        content: none !important;
+    }
+
 }
