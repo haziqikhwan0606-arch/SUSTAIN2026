@@ -129,12 +129,6 @@ $basePath  = $basePath ?? '';
             </a>
 
             <a
-                href="<?= $basePath; ?>pages/tracks.php"
-            >
-                Tracks
-            </a>
-
-            <a
                 href="<?= $basePath; ?>pages/speakers.php"
             >
                 Speakers
@@ -216,13 +210,6 @@ $basePath  = $basePath ?? '';
                 href="<?= $basePath; ?>pages/conference.php"
             >
                 Conference
-            </a>
-
-
-            <a
-                href="<?= $basePath; ?>pages/tracks.php"
-            >
-                Tracks
             </a>
 
 
