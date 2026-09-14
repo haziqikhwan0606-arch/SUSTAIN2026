@@ -33,7 +33,7 @@
     --border-light: rgba(17, 19, 17, 0.16);
     --border-acid: rgba(183, 214, 61, 0.34);
 
-    --font-display: "Instrument Sans", "DM Sans", sans-serif;
+    --font-display: "Space Grotesk", sans-serif;
     --font-body: "DM Sans", sans-serif;
 
     --container: 1440px;
@@ -8757,9 +8757,10 @@ p {
 ===================================================== */
 
 .conference-step {
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: var(--forest-deep);
 }
 
 .conference-step::before {
