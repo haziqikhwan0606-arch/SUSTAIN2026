@@ -667,14 +667,14 @@
             @php
                 $speakers = [
                     [
-                        'name' => 'iShowSpeed',
-                        'title' => 'YBhg.',
-                        'position' => 'Influencer',
-                        'organisation' => 'Twitch',
-                        'country' => 'USA',
+                        'name' => 'Speaker Name',
+                        'title' => '',
+                        'position' => 'Position / Title',
+                        'organisation' => 'Organisation',
+                        'country' => '',
                         'category' => 'Speaker',
-                        'topic' => 'Technology in Entertainment',
-                        'image' => 'speakercard/1.jpg',
+                        'topic' => 'Session Topic',
+                        'image' => 'speakercard/0.jpg',
                         'logo' => '',
                     ],
                     [
@@ -685,7 +685,7 @@
                         'country' => '',
                         'category' => 'Panel',
                         'topic' => 'Session Topic',
-                        'image' => 'speakercard/2.jpg',
+                        'image' => 'speakercard/0.jpg',
                         'logo' => '',
                     ],
                     [
@@ -696,7 +696,7 @@
                         'country' => '',
                         'category' => 'Speaker',
                         'topic' => 'Session Topic',
-                        'image' => 'speakercard/3.jpg',
+                        'image' => 'speakercard/0.jpg',
                         'logo' => '',
                     ],
                 ];
@@ -737,7 +737,7 @@
                             </div>
 
                             <p class="speaker-card__description">
-                                {{ $speaker['country'] ? $speaker['country'] . ' · ' : '' }}Speaker profile details will be confirmed.
+                                Add a short speaker introduction here when the programme is confirmed.
                             </p>
                         </div>
                     </article>
