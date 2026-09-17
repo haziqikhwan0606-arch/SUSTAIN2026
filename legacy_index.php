@@ -1024,6 +1024,39 @@ require_once 'includes/header.php';
 
 </main>
 
+<?php
+$collaboratorImages = glob(__DIR__ . '/assets/images/collaborator/*') ?: [];
+$collaboratorImages = array_values(array_filter(
+    $collaboratorImages,
+    static fn ($path) => in_array(strtolower(pathinfo($path, PATHINFO_EXTENSION)), ['jpg', 'jpeg', 'png', 'webp', 'svg'], true)
+));
+?>
+
+<section class="collaborator-panel section section--light" aria-labelledby="collaborator-title">
+    <div class="container">
+        <div class="collaborator-panel__heading">
+            <span class="section-label">OUR COLLABORATORS</span>
+            <h2 id="collaborator-title">Partners Behind <span>The Impact.</span></h2>
+        </div>
+    </div>
+
+    <?php if (!empty($collaboratorImages)): ?>
+        <div class="collaborator-marquee" aria-label="Collaborator logos">
+            <div class="collaborator-marquee__track">
+                <?php for ($sequence = 1; $sequence <= 2; $sequence++): ?>
+                    <div class="collaborator-marquee__group" aria-hidden="<?= $sequence === 1 ? 'false' : 'true'; ?>">
+                        <?php foreach ($collaboratorImages as $image): ?>
+                            <div class="collaborator-logo">
+                                <img src="assets/images/collaborator/<?= htmlspecialchars(basename($image)); ?>" alt="" loading="lazy">
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endfor; ?>
+            </div>
+        </div>
+    <?php endif; ?>
+</section>
+
 
 <?php
 require_once 'includes/footer.php';

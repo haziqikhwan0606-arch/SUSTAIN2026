@@ -1017,5 +1017,37 @@
 
     </section>
 
+    @php
+        $collaboratorImages = collect(glob(public_path('assets/images/collaborator/*')) ?: [])
+            ->filter(fn ($path) => in_array(strtolower(pathinfo($path, PATHINFO_EXTENSION)), ['jpg', 'jpeg', 'png', 'webp', 'svg']))
+            ->map(fn ($path) => basename($path))
+            ->values();
+    @endphp
+
+    <section class="collaborator-panel section section--light" aria-labelledby="collaborator-title">
+        <div class="container">
+            <div class="collaborator-panel__heading">
+                <span class="section-label">OUR COLLABORATORS</span>
+                <h2 id="collaborator-title">Partners Behind <span>The Impact.</span></h2>
+            </div>
+        </div>
+
+        @if ($collaboratorImages->isNotEmpty())
+            <div class="collaborator-marquee" aria-label="Collaborator logos">
+                <div class="collaborator-marquee__track">
+                    @foreach (range(1, 2) as $sequence)
+                        <div class="collaborator-marquee__group" aria-hidden="{{ $sequence === 1 ? 'false' : 'true' }}">
+                            @foreach ($collaboratorImages as $image)
+                                <div class="collaborator-logo">
+                                    <img src="{{ asset('assets/images/collaborator/' . $image) }}" alt="" loading="lazy">
+                                </div>
+                            @endforeach
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        @endif
+    </section>
+
 </main>
 @endsection
