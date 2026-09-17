@@ -12223,6 +12223,14 @@ p {
     background: #f7f7f2;
 }
 
+.speaker-wall__heading h2 {
+    color: var(--forest);
+}
+
+.speaker-wall__heading h2 span {
+    color: var(--orange);
+}
+
 .speaker-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
