@@ -25,14 +25,14 @@ require_once '../includes/header.php';
 $speakers = [
 
     [
-        'name' => 'Speaker Name',
+        'name' => 'Ahmad Abu',
         'title' => 'YBhg. Prof. / Dr. / Mr. / Ms.',
         'position' => 'Position / Role',
         'organisation' => 'Organisation Name',
         'country' => 'Malaysia',
         'category' => 'KEYNOTE SPEAKER',
         'topic' => 'Session or Topic Title',
-        'image' => '../assets/images/speakers/speaker-01.jpg',
+        'image' => 'assets/images/speakers/speaker-01.jpg',
         'logo' => ''
     ],
 
@@ -44,7 +44,7 @@ $speakers = [
         'country' => 'Malaysia',
         'category' => 'PANELIST',
         'topic' => 'Session or Topic Title',
-        'image' => '../assets/images/speakers/speaker-02.jpg',
+        'image' => 'assets/images/speakers/speaker-02.jpg',
         'logo' => ''
     ],
 
