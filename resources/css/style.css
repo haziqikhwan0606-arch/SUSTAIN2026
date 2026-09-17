@@ -12168,12 +12168,17 @@ p {
 .header-login {
     justify-content: center;
     min-width: 82px;
-    border-color: rgba(255, 255, 255, .45);
+    padding: 13px 17px;
+    border: 1px solid var(--acid);
+    background: var(--acid);
+    color: var(--black);
 }
 
-.site-header.scrolled .header-login {
-    border-color: rgba(41, 67, 47, .25);
-    color: var(--forest);
+.header-login:hover,
+.header-login--active {
+    border-color: var(--white);
+    background: var(--white);
+    color: var(--black);
 }
 
 .journey {

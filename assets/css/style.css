@@ -12413,8 +12413,20 @@ p {
 .header-actions { margin-left: 12px; }
 .header-login,
 .header-register { min-height: 42px; border-radius: 999px; }
-.header-login { justify-content: center; min-width: 82px; border-color: rgba(255,255,255,.45); }
-.site-header.scrolled .header-login { border-color: rgba(41,67,47,.25); color: var(--forest); }
+.header-login {
+    justify-content: center;
+    min-width: 82px;
+    padding: 13px 17px;
+    border: 1px solid var(--acid);
+    background: var(--acid);
+    color: var(--black);
+}
+.header-login:hover,
+.header-login--active {
+    border-color: var(--white);
+    background: var(--white);
+    color: var(--black);
+}
 
 .journey { background: var(--off-white); color: var(--forest); }
 .journey .section-label,
