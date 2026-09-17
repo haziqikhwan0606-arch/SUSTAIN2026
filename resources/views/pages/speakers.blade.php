@@ -633,7 +633,7 @@
          SPEAKER WALL
     ====================================================== -->
 
-    <section class="speaker-wall section section--dark">
+    <section class="speaker-wall section section--light">
 
         <div class="container">
 
@@ -664,25 +664,44 @@
                  SPEAKER EMPTY STATE
             ================================================== -->
 
-            <div class="speaker-empty">
+            <div class="speaker-grid">
+                @foreach ([
+                    ['image' => 'speaker-01.jpg', 'category' => 'KEYNOTE TEMPLATE'],
+                    ['image' => 'speaker-02.jpg', 'category' => 'PANEL TEMPLATE'],
+                    ['image' => 'speaker-03.jpg', 'category' => 'SPEAKER TEMPLATE'],
+                ] as $index => $speaker)
+                    <article class="speaker-card">
+                        <div class="speaker-card__image">
+                            <img
+                                src="{{ asset('assets/images/speakers/' . $speaker['image']) }}"
+                                alt="Speaker placeholder {{ $index + 1 }}"
+                                loading="lazy"
+                            >
+                        </div>
 
-                <span>
-                    01
-                </span>
+                        <div class="speaker-card__content">
+                            <div class="speaker-card__meta">
+                                <span class="speaker-card__number">{{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                                <span class="speaker-card__category">{{ $speaker['category'] }}</span>
+                            </div>
 
-                <h3>
-                    SPEAKER
-                    ANNOUNCEMENTS
-                    <span>
-                        COMING SOON.
-                    </span>
-                </h3>
+                            <h3>Speaker Name</h3>
+                            <p class="speaker-card__position">
+                                Position / Title<br>
+                                <span>Organisation</span>
+                            </p>
 
-                <p>
-                    Speaker details will be announced as the
-                    SUSTAIN 2026 programme is confirmed.
-                </p>
+                            <div class="speaker-card__topic">
+                                <span class="speaker-card__topic-label">SESSION</span>
+                                <p>Session Topic</p>
+                            </div>
 
+                            <p class="speaker-card__description">
+                                Add a short speaker introduction here when the programme is confirmed.
+                            </p>
+                        </div>
+                    </article>
+                @endforeach
             </div>
 
 

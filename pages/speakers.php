@@ -26,44 +26,42 @@ $speakers = [
 
     [
         'name' => 'Speaker Name',
-        'title' => 'YBhg. Prof. / Dr. / Mr. / Ms.',
-        'position' => 'Position / Role',
-        'organisation' => 'Organisation Name',
-        'country' => 'Malaysia',
-        'category' => 'KEYNOTE SPEAKER',
-        'topic' => 'Session or Topic Title',
+        'title' => '',
+        'position' => 'Position / Title',
+        'organisation' => 'Organisation',
+        'country' => '',
+        'category' => 'KEYNOTE TEMPLATE',
+        'topic' => 'Session Topic',
+        'description' => 'Add a short speaker introduction here when the programme is confirmed.',
         'image' => '../assets/images/speakers/speaker-01.jpg',
         'logo' => ''
     ],
 
     [
         'name' => 'Speaker Name',
-        'title' => 'Dr.',
-        'position' => 'Position / Role',
-        'organisation' => 'Organisation Name',
-        'country' => 'Malaysia',
-        'category' => 'PANELIST',
-        'topic' => 'Session or Topic Title',
+        'title' => '',
+        'position' => 'Position / Title',
+        'organisation' => 'Organisation',
+        'country' => '',
+        'category' => 'PANEL TEMPLATE',
+        'topic' => 'Session Topic',
+        'description' => 'Add a short speaker introduction here when the programme is confirmed.',
         'image' => '../assets/images/speakers/speaker-02.jpg',
         'logo' => ''
     ],
 
-    // =================================================
-    // COPY THIS BLOCK FOR MORE SPEAKERS
-    // =================================================
-    /*
     [
         'name' => 'Speaker Name',
-        'title' => 'Dr.',
-        'position' => 'Position / Role',
-        'organisation' => 'Organisation Name',
-        'country' => 'Malaysia',
-        'category' => 'PANELIST',
-        'topic' => 'Session or Topic Title',
+        'title' => '',
+        'position' => 'Position / Title',
+        'organisation' => 'Organisation',
+        'country' => '',
+        'category' => 'SPEAKER TEMPLATE',
+        'topic' => 'Session Topic',
+        'description' => 'Add a short speaker introduction here when the programme is confirmed.',
         'image' => '../assets/images/speakers/speaker-03.jpg',
         'logo' => ''
     ],
-    */
 
 ];
 
@@ -870,6 +868,11 @@ $speakers = [
 
                                 <?php endif; ?>
 
+                                <?php if (!empty($speaker['description'])): ?>
+                                    <p class="speaker-card__description">
+                                        <?= htmlspecialchars($speaker['description']) ?>
+                                    </p>
+                                <?php endif; ?>
 
 
                                 <!-- COUNTRY -->

@@ -150,36 +150,84 @@
          AWARD AREAS
     ====================================================== -->
 
-    <section class="awards-categories section section--dark">
+    <section class="awards-categories awards-template section section--light">
 
         <div class="container">
 
             <div class="awards-heading">
 
-                <div class="section-index section-index--light">
+                <div class="section-index">
                     02
                 </div>
 
                 <div>
 
-                    <p class="eyebrow">
-                        AREAS OF RECOGNITION
+                    <p class="eyebrow eyebrow--dark">
+                        AWARD INFORMATION
                     </p>
 
                     <h2>
-                        NINE
-                        <span>WAYS</span>
-                        TO CREATE IMPACT.
+                        AWARD
+                        <span>CATEGORIES</span>
                     </h2>
+
+                    <p class="awards-template__intro">
+                        Placeholder award groups for the final programme. Replace
+                        the names, descriptions and statuses when details are confirmed.
+                    </p>
+
+                    <a href="#award-information" class="button button--lime">
+                        View categories
+                        <span>↓</span>
+                    </a>
 
                 </div>
 
             </div>
 
 
+            <div class="award-category-grid" id="award-information">
+                <div class="award-category-group">
+                    <div class="award-category-group__header">
+                        <span>GROUP A</span>
+                        <h3>Company Awards</h3>
+                    </div>
+                    <div class="award-template-list">
+                        @for ($item = 1; $item <= 4; $item++)
+                            <article class="award-template-item">
+                                <span class="award-template-item__icon">✦</span>
+                                <div>
+                                    <h4>Award Name</h4>
+                                    <p>Supporting text placeholder.</p>
+                                </div>
+                                <span class="award-template-item__status">Status</span>
+                            </article>
+                        @endfor
+                    </div>
+                </div>
+
+                <div class="award-category-group award-category-group--accent">
+                    <div class="award-category-group__header">
+                        <span>GROUP B</span>
+                        <h3>Individual Awards</h3>
+                    </div>
+                    <div class="award-template-list">
+                        @for ($item = 1; $item <= 4; $item++)
+                            <article class="award-template-item">
+                                <span class="award-template-item__icon">✦</span>
+                                <div>
+                                    <h4>Award Name</h4>
+                                    <p>Supporting text placeholder.</p>
+                                </div>
+                                <span class="award-template-item__status">Status</span>
+                            </article>
+                        @endfor
+                    </div>
+                </div>
+            </div>
+
+            {{--
             <div class="award-list">
-
-
                 <article class="award-item">
 
                     <span class="award-item__number">
@@ -198,7 +246,6 @@
                         </p>
 
                     </div>
-
                     <span class="award-item__arrow">
                         ↗
                     </span>
@@ -423,6 +470,7 @@
 
 
             </div>
+            --}}
 
         </div>
 

@@ -213,6 +213,10 @@ require_once 'includes/header.php';
 
             <article class="journey-stage">
 
+                <div class="journey-stage__image">
+                    <img src="assets/images/journey/1.jpg" alt="Journey stage 1" loading="lazy">
+                </div>
+
                 <span class="journey-stage__number">01</span>
 
                 <div class="journey-stage__content">
@@ -238,6 +242,10 @@ require_once 'includes/header.php';
             <!-- 02 -->
 
             <article class="journey-stage">
+
+                <div class="journey-stage__image">
+                    <img src="assets/images/journey/2.jpg" alt="Journey stage 2" loading="lazy">
+                </div>
 
                 <span class="journey-stage__number">02</span>
 
@@ -265,6 +273,10 @@ require_once 'includes/header.php';
 
             <article class="journey-stage">
 
+                <div class="journey-stage__image">
+                    <img src="assets/images/journey/3.jpg" alt="Journey stage 3" loading="lazy">
+                </div>
+
                 <span class="journey-stage__number">03</span>
 
                 <div class="journey-stage__content">
@@ -291,6 +303,10 @@ require_once 'includes/header.php';
 
             <article class="journey-stage">
 
+                <div class="journey-stage__image">
+                    <img src="assets/images/journey/4.jpg" alt="Journey stage 4" loading="lazy">
+                </div>
+
                 <span class="journey-stage__number">04</span>
 
                 <div class="journey-stage__content">
@@ -316,6 +332,10 @@ require_once 'includes/header.php';
             <!-- 05 -->
 
             <article class="journey-stage journey-stage--impact">
+
+                <div class="journey-stage__image">
+                    <img src="assets/images/journey/5.jpg" alt="Journey stage 5" loading="lazy">
+                </div>
 
                 <span class="journey-stage__number">05</span>
 

@@ -173,6 +173,15 @@ $logoFile  = $logoFile ?? 'logo/logo.png';
 
         </a>
 
+        <div class="header-actions" aria-label="Account actions">
+            <a
+                href="<?= $basePath; ?>admin/login.php"
+                class="header-login"
+            >
+                <span>Login</span>
+            </a>
+        </div>
+
 
         <!-- =================================================
              MOBILE MENU BUTTON

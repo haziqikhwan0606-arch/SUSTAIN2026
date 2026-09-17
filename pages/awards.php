@@ -150,278 +150,102 @@ require_once '../includes/header.php';
          AWARD AREAS
     ====================================================== -->
 
-    <section class="awards-categories section section--dark">
+    <section class="awards-categories awards-template section section--light">
 
         <div class="container">
 
             <div class="awards-heading">
 
-                <div class="section-index section-index--light">
+                <div class="section-index">
                     02
                 </div>
 
                 <div>
 
-                    <p class="eyebrow">
-                        AREAS OF RECOGNITION
+                    <p class="eyebrow eyebrow--dark">
+                        AWARD INFORMATION
                     </p>
 
                     <h2>
-                        NINE
-                        <span>WAYS</span>
-                        TO CREATE IMPACT.
+                        AWARD
+                        <span>CATEGORIES</span>
                     </h2>
+
+                    <p class="awards-template__intro">
+                        Placeholder award groups for the final programme. Replace
+                        the names, descriptions and statuses when details are confirmed.
+                    </p>
+
+                    <a href="#award-information" class="button button--lime">
+                        View categories
+                        <span>↓</span>
+                    </a>
 
                 </div>
 
             </div>
 
 
-            <div class="award-list">
-
-
-                <article class="award-item">
-
-                    <span class="award-item__number">
-                        01
-                    </span>
-
-                    <div class="award-item__content">
-
-                        <h3>
-                            Sustainability Leadership
-                        </h3>
-
-                        <p>
-                            Recognising leadership that drives
-                            meaningful sustainability transformation.
-                        </p>
-
+            <div class="award-category-grid" id="award-information">
+                <div class="award-category-group">
+                    <div class="award-category-group__header">
+                        <span>GROUP A</span>
+                        <h3>Company Awards</h3>
                     </div>
 
-                    <span class="award-item__arrow">
-                        ↗
-                    </span>
+                    <div class="award-template-list">
+                        <article class="award-template-item">
+                            <span class="award-template-item__icon">✦</span>
+                            <div><h4>Award Name</h4><p>Supporting text placeholder.</p></div>
+                            <span class="award-template-item__status">Status</span>
+                        </article>
+                        <article class="award-template-item">
+                            <span class="award-template-item__icon">✦</span>
+                            <div><h4>Award Name</h4><p>Supporting text placeholder.</p></div>
+                            <span class="award-template-item__status">Status</span>
+                        </article>
+                        <article class="award-template-item">
+                            <span class="award-template-item__icon">✦</span>
+                            <div><h4>Award Name</h4><p>Supporting text placeholder.</p></div>
+                            <span class="award-template-item__status">Status</span>
+                        </article>
+                        <article class="award-template-item">
+                            <span class="award-template-item__icon">✦</span>
+                            <div><h4>Award Name</h4><p>Supporting text placeholder.</p></div>
+                            <span class="award-template-item__status">Status</span>
+                        </article>
+                    </div>
+                </div>
 
-                </article>
-
-
-
-                <article class="award-item">
-
-                    <span class="award-item__number">
-                        02
-                    </span>
-
-                    <div class="award-item__content">
-
-                        <h3>
-                            ESG Implementation
-                        </h3>
-
-                        <p>
-                            Recognising organisations turning ESG
-                            principles into meaningful action.
-                        </p>
-
+                <div class="award-category-group award-category-group--accent">
+                    <div class="award-category-group__header">
+                        <span>GROUP B</span>
+                        <h3>Individual Awards</h3>
                     </div>
 
-                    <span class="award-item__arrow">
-                        ↗
-                    </span>
-
-                </article>
-
-
-
-                <article class="award-item">
-
-                    <span class="award-item__number">
-                        03
-                    </span>
-
-                    <div class="award-item__content">
-
-                        <h3>
-                            Green Innovation
-                        </h3>
-
-                        <p>
-                            Celebrating innovative ideas and solutions
-                            creating positive environmental impact.
-                        </p>
-
+                    <div class="award-template-list">
+                        <article class="award-template-item">
+                            <span class="award-template-item__icon">✦</span>
+                            <div><h4>Award Name</h4><p>Supporting text placeholder.</p></div>
+                            <span class="award-template-item__status">Status</span>
+                        </article>
+                        <article class="award-template-item">
+                            <span class="award-template-item__icon">✦</span>
+                            <div><h4>Award Name</h4><p>Supporting text placeholder.</p></div>
+                            <span class="award-template-item__status">Status</span>
+                        </article>
+                        <article class="award-template-item">
+                            <span class="award-template-item__icon">✦</span>
+                            <div><h4>Award Name</h4><p>Supporting text placeholder.</p></div>
+                            <span class="award-template-item__status">Status</span>
+                        </article>
+                        <article class="award-template-item">
+                            <span class="award-template-item__icon">✦</span>
+                            <div><h4>Award Name</h4><p>Supporting text placeholder.</p></div>
+                            <span class="award-template-item__status">Status</span>
+                        </article>
                     </div>
-
-                    <span class="award-item__arrow">
-                        ↗
-                    </span>
-
-                </article>
-
-
-
-                <article class="award-item">
-
-                    <span class="award-item__number">
-                        04
-                    </span>
-
-                    <div class="award-item__content">
-
-                        <h3>
-                            Carbon Reduction
-                        </h3>
-
-                        <p>
-                            Recognising measurable efforts to reduce
-                            emissions and accelerate decarbonisation.
-                        </p>
-
-                    </div>
-
-                    <span class="award-item__arrow">
-                        ↗
-                    </span>
-
-                </article>
-
-
-
-                <article class="award-item">
-
-                    <span class="award-item__number">
-                        05
-                    </span>
-
-                    <div class="award-item__content">
-
-                        <h3>
-                            Sustainable Business
-                        </h3>
-
-                        <p>
-                            Celebrating businesses embedding sustainability
-                            into strategy, operations and growth.
-                        </p>
-
-                    </div>
-
-                    <span class="award-item__arrow">
-                        ↗
-                    </span>
-
-                </article>
-
-
-
-                <article class="award-item">
-
-                    <span class="award-item__number">
-                        06
-                    </span>
-
-                    <div class="award-item__content">
-
-                        <h3>
-                            Sustainable Infrastructure
-                        </h3>
-
-                        <p>
-                            Recognising infrastructure designed to support
-                            resilient and sustainable communities.
-                        </p>
-
-                    </div>
-
-                    <span class="award-item__arrow">
-                        ↗
-                    </span>
-
-                </article>
-
-
-
-                <article class="award-item">
-
-                    <span class="award-item__number">
-                        07
-                    </span>
-
-                    <div class="award-item__content">
-
-                        <h3>
-                            Sustainable Finance
-                        </h3>
-
-                        <p>
-                            Highlighting financial approaches that support
-                            responsible and sustainable development.
-                        </p>
-
-                    </div>
-
-                    <span class="award-item__arrow">
-                        ↗
-                    </span>
-
-                </article>
-
-
-
-                <article class="award-item">
-
-                    <span class="award-item__number">
-                        08
-                    </span>
-
-                    <div class="award-item__content">
-
-                        <h3>
-                            Community Impact
-                        </h3>
-
-                        <p>
-                            Celebrating initiatives creating meaningful
-                            social and community outcomes.
-                        </p>
-
-                    </div>
-
-                    <span class="award-item__arrow">
-                        ↗
-                    </span>
-
-                </article>
-
-
-
-                <article class="award-item">
-
-                    <span class="award-item__number">
-                        09
-                    </span>
-
-                    <div class="award-item__content">
-
-                        <h3>
-                            Industry Transformation
-                        </h3>
-
-                        <p>
-                            Recognising initiatives reshaping industries
-                            towards a more sustainable future.
-                        </p>
-
-                    </div>
-
-                    <span class="award-item__arrow">
-                        ↗
-                    </span>
-
-                </article>
-
-
+                </div>
             </div>
 
         </div>
