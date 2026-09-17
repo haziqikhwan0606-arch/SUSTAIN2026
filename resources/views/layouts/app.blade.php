@@ -55,7 +55,7 @@
                     @csrf
                 </form>
             @else
-                <a href="{{ route('admin.login') }}" class="header-login">
+                <a href="{{ url('users/login.php') }}" class="header-login">
                     <span>Login</span>
                 </a>
             @endif
@@ -94,7 +94,7 @@
                     @csrf
                 </form>
             @else
-                <a href="{{ route('admin.login') }}">Login</a>
+                <a href="{{ url('users/login.php') }}">Login</a>
             @endif
 
             <a href="{{ route('register') }}" class="mobile-nav__register">
