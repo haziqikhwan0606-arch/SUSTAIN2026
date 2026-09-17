@@ -664,17 +664,51 @@
                  SPEAKER EMPTY STATE
             ================================================== -->
 
+            @php
+                $speakers = [
+                    [
+                        'name' => 'iShowSpeed',
+                        'title' => 'YBhg.',
+                        'position' => 'Influencer',
+                        'organisation' => 'Twitch',
+                        'country' => 'USA',
+                        'category' => 'Speaker',
+                        'topic' => 'Technology in Entertainment',
+                        'image' => 'speaker-01.jpg',
+                        'logo' => '',
+                    ],
+                    [
+                        'name' => 'Speaker Name',
+                        'title' => '',
+                        'position' => 'Position / Title',
+                        'organisation' => 'Organisation',
+                        'country' => '',
+                        'category' => 'Panel',
+                        'topic' => 'Session Topic',
+                        'image' => 'speaker-02.jpg',
+                        'logo' => '',
+                    ],
+                    [
+                        'name' => 'Speaker Name',
+                        'title' => '',
+                        'position' => 'Position / Title',
+                        'organisation' => 'Organisation',
+                        'country' => '',
+                        'category' => 'Speaker',
+                        'topic' => 'Session Topic',
+                        'image' => 'speaker-03.jpg',
+                        'logo' => '',
+                    ],
+                ];
+            @endphp
+
             <div class="speaker-grid">
-                @foreach ([
-                    ['image' => 'speaker-01.jpg', 'category' => 'KEYNOTE TEMPLATE'],
-                    ['image' => 'speaker-02.jpg', 'category' => 'PANEL TEMPLATE'],
-                    ['image' => 'speaker-03.jpg', 'category' => 'SPEAKER TEMPLATE'],
-                ] as $index => $speaker)
+                @foreach ($speakers as $index => $speaker)
                     <article class="speaker-card">
                         <div class="speaker-card__image">
                             <img
                                 src="{{ asset('assets/images/speakers/' . $speaker['image']) }}"
-                                alt="Speaker placeholder {{ $index + 1 }}"
+                                alt="{{ trim($speaker['title'] . ' ' . $speaker['name']) }}"
                                 loading="lazy"
                             >
                         </div>
@@ -685,19 +719,24 @@
                                 <span class="speaker-card__category">{{ $speaker['category'] }}</span>
                             </div>
 
-                            <h3>Speaker Name</h3>
+                            <h3>
+                                @if ($speaker['title'])
+                                    {{ $speaker['title'] }}
+                                @endif
+                                {{ $speaker['name'] }}
+                            </h3>
                             <p class="speaker-card__position">
-                                Position / Title<br>
-                                <span>Organisation</span>
+                                {{ $speaker['position'] }}<br>
+                                <span>{{ $speaker['organisation'] }}</span>
                             </p>
 
                             <div class="speaker-card__topic">
                                 <span class="speaker-card__topic-label">SESSION</span>
-                                <p>Session Topic</p>
+                                <p>{{ $speaker['topic'] }}</p>
                             </div>
 
                             <p class="speaker-card__description">
-                                Add a short speaker introduction here when the programme is confirmed.
+                                {{ $speaker['country'] ? $speaker['country'] . ' · ' : '' }}Speaker profile details will be confirmed.
                             </p>
                         </div>
                     </article>

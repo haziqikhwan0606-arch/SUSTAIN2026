@@ -25,14 +25,14 @@ require_once '../includes/header.php';
 $speakers = [
 
     [
-        'name' => 'Speaker Name',
-        'title' => '',
-        'position' => 'Position / Title',
-        'organisation' => 'Organisation',
-        'country' => '',
-        'category' => 'KEYNOTE TEMPLATE',
-        'topic' => 'Session Topic',
-        'description' => 'Add a short speaker introduction here when the programme is confirmed.',
+        'name' => 'iShowSpeed',
+        'title' => 'YBhg.',
+        'position' => 'Influencer',
+        'organisation' => 'Twitch',
+        'country' => 'USA',
+        'category' => 'Speaker',
+        'topic' => 'Technology in Entertainment',
+        'description' => 'Speaker profile details will be confirmed.',
         'image' => '../assets/images/speakers/speaker-01.jpg',
         'logo' => ''
     ],
