@@ -33,7 +33,7 @@ $speakers = [
         'category' => 'Speaker',
         'topic' => 'Technology in Entertainment',
         'description' => 'Speaker profile details will be confirmed.',
-        'image' => '../assets/images/speakers/speaker-01.jpg',
+        'image' => '../assets/images/speakercard/1.jpg',
         'logo' => ''
     ],
 
@@ -46,7 +46,7 @@ $speakers = [
         'category' => 'PANEL TEMPLATE',
         'topic' => 'Session Topic',
         'description' => 'Add a short speaker introduction here when the programme is confirmed.',
-        'image' => '../assets/images/speakers/speaker-02.jpg',
+        'image' => '../assets/images/speakercard/2.jpg',
         'logo' => ''
     ],
 
@@ -59,7 +59,7 @@ $speakers = [
         'category' => 'SPEAKER TEMPLATE',
         'topic' => 'Session Topic',
         'description' => 'Add a short speaker introduction here when the programme is confirmed.',
-        'image' => '../assets/images/speakers/speaker-03.jpg',
+        'image' => '../assets/images/speakercard/3.jpg',
         'logo' => ''
     ],
 
@@ -745,7 +745,8 @@ $speakers = [
                                     <img
                                         src="<?= htmlspecialchars($speaker['image']) ?>"
                                         alt="<?= htmlspecialchars($speaker['name']) ?>"
-                                        loading="lazy"
+                                        loading="eager"
+                                        decoding="async"
                                     >
 
                                 <?php else: ?>

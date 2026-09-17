@@ -674,7 +674,7 @@
                         'country' => 'USA',
                         'category' => 'Speaker',
                         'topic' => 'Technology in Entertainment',
-                        'image' => 'speaker-01.jpg',
+                        'image' => 'speakercard/1.jpg',
                         'logo' => '',
                     ],
                     [
@@ -685,7 +685,7 @@
                         'country' => '',
                         'category' => 'Panel',
                         'topic' => 'Session Topic',
-                        'image' => 'speaker-02.jpg',
+                        'image' => 'speakercard/2.jpg',
                         'logo' => '',
                     ],
                     [
@@ -696,7 +696,7 @@
                         'country' => '',
                         'category' => 'Speaker',
                         'topic' => 'Session Topic',
-                        'image' => 'speaker-03.jpg',
+                        'image' => 'speakercard/3.jpg',
                         'logo' => '',
                     ],
                 ];
@@ -707,9 +707,10 @@
                     <article class="speaker-card">
                         <div class="speaker-card__image">
                             <img
-                                src="{{ asset('assets/images/speakers/' . $speaker['image']) }}"
+                                src="{{ asset('assets/images/' . $speaker['image']) }}"
                                 alt="{{ trim($speaker['title'] . ' ' . $speaker['name']) }}"
-                                loading="lazy"
+                                loading="eager"
+                                decoding="async"
                             >
                         </div>
 
