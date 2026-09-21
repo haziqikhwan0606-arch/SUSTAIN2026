@@ -29,10 +29,7 @@ require_once '../includes/header.php';
         >
     </video>
 
-    <div class="inner-hero__meta">
-        <span> THE CONFERENCE</span>
-        <span>10 NOVEMBER 2026</span>
-    </div>
+    
 
     <div class="inner-hero__content">
 

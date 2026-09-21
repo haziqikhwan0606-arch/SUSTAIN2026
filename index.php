@@ -81,6 +81,29 @@ require_once 'includes/header.php';
 
             </div>
         </div>
+<!-- =====================================================
+             DRAGGABLE COUNTDOWN WIDGET (LETAK DI SINI)
+        ====================================================== -->
+        <div class="hero-countdown-widget" id="draggableCountdown">
+            <div class="countdown-timer" id="countdownTimer">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <small>Days</small>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <small>Hours</small>
+                </div>
+                <div class="time-box">
+                    <span id="mins">00</span>
+                    <small>Mins</small>
+                </div>
+                <div class="time-box">
+                    <span id="secs">00</span>
+                    <small>Secs</small>
+                </div>
+            </div>
+        </div>
 
         <div class="hero__scroll">
             <span>SCROLL TO EXPLORE</span>
@@ -700,34 +723,21 @@ require_once 'includes/header.php';
     </section>
 
 
-    <!-- SDG information window -->
-    <div class="sdg-overlay" id="sdgOverlay" aria-hidden="true"></div>
+  <!-- SDG information window -->
+<div class="sdg-overlay" id="sdgOverlay" aria-hidden="true"></div>
 
-    <div class="sdg-modal"
-         id="sdgModal"
-         role="dialog"
-         aria-modal="true"
-         aria-labelledby="sdgModalTitle"
-         hidden>
+<div class="sdg-modal"
+     id="sdgModal"
+     role="dialog"
+     aria-modal="true"
+     hidden>
 
-        <div class="sdg-modal__number" id="sdgModalNumber">
-            
-        </div>
-
-        <span class="sdg-modal__label">
-            SUSTAINABLE DEVELOPMENT GOAL
-        </span>
-
-        <h3 class="sdg-modal__title" id="sdgModalTitle">
-            Quality Education
-        </h3>
-
-        <p class="sdg-modal__description" id="sdgModalDescription">
-            Ensure inclusive and equitable quality education
-            and promote lifelong learning opportunities for all.
-        </p>
-
+    <!-- Paparan Imej SDG -->
+    <div class="sdg-modal__image-container">
+        <img id="sdgModalImg" src="" alt="SDG Poster">
     </div>
+
+</div>
 
 
     <!-- =====================================================

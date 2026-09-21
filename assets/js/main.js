@@ -168,8 +168,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-        /* =====================================================
-       SDG — HOVER INFORMATION WINDOW
+    /* =====================================================
+       SDG — HOVER INFORMATION WINDOW (IMAGE VERSION)
     ====================================================== */
 
     const sdgItems =
@@ -181,35 +181,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const sdgModal =
         document.getElementById("sdgModal");
 
-    const sdgModalNumber =
-        document.getElementById("sdgModalNumber");
-
-    const sdgModalTitle =
-        document.getElementById("sdgModalTitle");
-
-    const sdgModalDescription =
-        document.getElementById("sdgModalDescription");
+    const sdgModalImg =
+        document.getElementById("sdgModalImg");
 
 
     if (
         sdgItems.length &&
         sdgModal &&
-        sdgModalNumber &&
-        sdgModalTitle &&
-        sdgModalDescription
+        sdgModalImg
     ) {
 
         function populateSdgModal(item) {
+            const sdgNumber = item.dataset.sdg || "";
 
-            sdgModalNumber.textContent =
-                item.dataset.sdg || "";
+            // Senarai nombor SDG yang menggunakan format .jpg (selain daripada ni semua guna .png)
+            const jpgList = ["09", "13", "17"];
+            const extension = jpgList.includes(sdgNumber) ? "jpg" : "png";
 
-            sdgModalTitle.textContent =
-                item.dataset.title || "";
-
-            sdgModalDescription.textContent =
-                item.dataset.description || "";
-
+            // Tetapkan sumber imej secara dinamik
+            sdgModalImg.src = `assets/images/sdg/${sdgNumber}.${extension}`;
+            sdgModalImg.alt = item.dataset.title || `SDG ${sdgNumber}`;
         }
 
 
@@ -259,6 +250,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 ""
             );
 
+            // Kosongkan imej bila ditutup
+            sdgModalImg.src = "";
+
         }
 
 
@@ -271,18 +265,14 @@ document.addEventListener("DOMContentLoaded", () => {
             item.addEventListener(
                 "mouseenter",
                 () => {
-
                     showSdgModal(item);
-
                 }
             );
 
             item.addEventListener(
                 "mouseleave",
                 () => {
-
                     hideSdgModal();
-
                 }
             );
 
@@ -323,17 +313,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         function updateTrackFocus(item) {
-    trackFocusDisplay.classList.add("is-changing");
+            trackFocusDisplay.classList.add("is-changing");
 
-    setTimeout(() => {
+            setTimeout(() => {
 
-        const number = item.dataset.number || "";
+                const number = item.dataset.number || "";
 
-        displayNumber.textContent = number;
-        displayTitle.innerHTML = item.dataset.display || "";
-        displayKeywords.textContent = item.dataset.keywords || "";
+                displayNumber.textContent = number;
+                displayTitle.innerHTML = item.dataset.display || "";
+                displayKeywords.textContent = item.dataset.keywords || "";
 
-        trackFocusDisplay.style.backgroundImage = `
+                trackFocusDisplay.style.backgroundImage = `
             linear-gradient(
                 rgba(10, 12, 11, .62),
                 rgba(10, 12, 11, .78)
@@ -341,10 +331,10 @@ document.addEventListener("DOMContentLoaded", () => {
             url("/assets/images/tracks/${number}.jpg")
         `;
 
-        trackFocusDisplay.classList.remove("is-changing");
+                trackFocusDisplay.classList.remove("is-changing");
 
-    }, 180);
-}
+            }, 180);
+        }
 
 
         trackFocusItems.forEach(item => {
@@ -471,4 +461,109 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
 });
-    
+
+/* =====================================================
+   DRAGGABLE COUNTDOWN WIDGET LOGIC
+   ====================================================== */
+const widget = document.getElementById('draggableCountdown');
+const heroSection = document.querySelector('.hero'); // Pastikan kelas hero padan
+
+// Semak wujudnya widget dan hero seksyen sahaja (header sudah dibuang)
+if (widget && heroSection) {
+    let isDragging = false;
+    let startX, startY, initialX, initialY;
+
+    // Fungsi Drag (Desktop & Mobile) - Diletakkan terus pada keseluruhan widget
+    widget.addEventListener('mousedown', dragStart);
+    document.addEventListener('mousemove', drag);
+    document.addEventListener('mouseup', dragEnd);
+
+    widget.addEventListener('touchstart', dragStartTouch, { passive: true });
+    document.addEventListener('touchmove', dragTouch, { passive: false });
+    document.addEventListener('touchend', dragEnd);
+
+    function dragStart(e) {
+        isDragging = true;
+        startX = e.clientX;
+        startY = e.clientY;
+        setInitialPosition();
+    }
+
+    function dragStartTouch(e) {
+        isDragging = true;
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        setInitialPosition();
+    }
+
+    function setInitialPosition() {
+        const rect = widget.getBoundingClientRect();
+        const heroRect = heroSection.getBoundingClientRect();
+        initialX = rect.left - heroRect.left;
+        initialY = rect.top - heroRect.top;
+        widget.style.position = 'absolute';
+        widget.style.right = 'auto'; // Lepaskan tetapan CSS asal
+    }
+
+    function drag(e) {
+        if (!isDragging) return;
+        e.preventDefault();
+        calculateDrag(e.clientX, e.clientY);
+    }
+
+    function dragTouch(e) {
+        if (!isDragging) return;
+        calculateDrag(e.touches[0].clientX, e.touches[0].clientY);
+    }
+
+    function calculateDrag(currentX, currentY) {
+        const dx = currentX - startX;
+        const dy = currentY - startY;
+
+        let newX = initialX + dx;
+        let newY = initialY + dy;
+
+        // Hadkan pergerakan hanya di dalam kawasan Hero seksyen sahaja
+        const heroRect = heroSection.getBoundingClientRect();
+        const widgetRect = widget.getBoundingClientRect();
+
+        const maxX = heroRect.width - widgetRect.width;
+        const maxY = heroRect.height - widgetRect.height;
+
+        newX = Math.max(0, Math.min(newX, maxX));
+        newY = Math.max(0, Math.min(newY, maxY));
+
+        widget.style.left = `${newX}px`;
+        widget.style.top = `${newY}px`;
+    }
+
+    function dragEnd() {
+        isDragging = false;
+    }
+
+    // Countdown Timer ke 10 November 2026
+    const eventDate = new Date('November 10, 2026 00:00:00').getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const gap = eventDate - now;
+
+        const second = 1000;
+        const minute = second * 60;
+        const hour = minute * 60;
+        const day = hour * 24;
+
+        const d = Math.floor(gap / day);
+        const h = Math.floor((gap % day) / hour);
+        const m = Math.floor((gap % hour) / minute);
+        const s = Math.floor((gap % minute) / second);
+
+        document.getElementById('days').textContent = String(d).padStart(2, '0');
+        document.getElementById('hours').textContent = String(h).padStart(2, '0');
+        document.getElementById('mins').textContent = String(m).padStart(2, '0');
+        document.getElementById('secs').textContent = String(s).padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+}

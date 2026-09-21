@@ -13481,3 +13481,117 @@ p {
     font-style: italic;
     margin-top: 4px;
 }
+
+.sdg-modal {
+    /* Pastikan gaya asas modal asal dikekalkan, tambah ni untuk imej */
+    text-align: center;
+    padding: 20px;
+}
+
+.sdg-modal__image-container img {
+    width: 100%;
+    max-width: 400px;
+    /* Hadkan saiz maksimum imej */
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.sdg-modal__close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 10px;
+}
+
+//* =====================================================
+HERO SECTION CONTAINER REQUIREMENT======================================================*/ .hero {
+    position: relative;
+    /* Wajib ada supaya widget absolute terkurung dalam hero */
+    overflow: hidden;
+}
+
+/* =====================================================
+   DRAGGABLE COUNTDOWN WIDGET — APPLE FROSTED GLASS
+   ====================================================== */
+.hero-countdown-widget {
+    position: absolute;
+    top: 130px;
+    right: 60px;
+    z-index: 50;
+
+    /* Apple Glass Look: Sangat lutsinar dengan kesan blur mendalam */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+    /* Sudut lengkung cantik ala iOS widget */
+    border-radius: 22px;
+    padding: 14px;
+
+    /* Garisan sempadan kaca halus dan kilauan 3D */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3),
+        inset 0 1px 1px rgba(255, 255, 255, 0.4);
+
+    user-select: none;
+    cursor: grab;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-countdown-widget:hover {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.4),
+        inset 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+.hero-countdown-widget:active {
+    cursor: grabbing;
+    transform: scale(0.98);
+}
+
+.countdown-timer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    text-align: center;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Kotak dalaman kaca ultra-lembut */
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 6px;
+    border-radius: 14px;
+    min-width: 52px;
+}
+
+.time-box span {
+    /* Nombor JAUH LEBIH BESAR, tebal, dan kontras tinggi */
+    font-size: 30px;
+    font-weight: 900;
+    font-family: var(--font-display, monospace);
+    color: #ffffff;
+    /* Putih pekat bersinar */
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+    /* Bayang gelap di belakang teks supaya mudah dibaca atas video */
+    letter-spacing: -0.04em;
+    line-height: 1;
+}
+
+.time-box small {
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.75);
+}
